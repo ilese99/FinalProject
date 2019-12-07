@@ -34,5 +34,13 @@ The variable selected to evaluate the attitude towards Mental Health was the **w
 
 The dataset was processed to understand the top 10 of states from the United States that have more positive answer from the workers about the existence of wellness programs in their companies.
 
+``` python
+#Group by State
+wellness_program_groupby = wellness_program.groupby('state',as_index=False)['wellness_program'].count()
+wellness_program_groupby = wellness_program_groupby.sort_values('wellness_program', ascending=False)
+wellness_program_groupby = wellness_program_groupby.reset_index(drop=True)
+wellness_program_groupby = wellness_program_groupby.head(10)
+print(wellness_program_groupby)
+```
 
 
