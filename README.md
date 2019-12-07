@@ -21,13 +21,18 @@ First, the CSV format dataset called "survey" was loaded to be transformed and a
 DataSurvey = pd.read_csv("./survey.csv")
 ```
 
-Due to the purpose of the evaluate attitude towards the Mental Health of the *United States companies*, the dataset was transformed into a new one. It contains exclusively informartion of workers from the USA.
 
+
+Due to the purpose of the evaluate attitude towards the Mental Health of the **United States companies**, the dataset was transformed into a new one. It contains exclusively informartion of workers from the USA.
 ``` python
 #Create a new dataset that contains just "United State"
 
 USA_states = DataSurvey[DataSurvey["Country"] == "United States"]
 ```
 
-The variable selected to evaluate the attitude towards Mental Health was the *wellness_program*. It indicates whether the company offers a wellness program to the employees. This program should promote practices to enhance and treat mental health.
+The variable selected to evaluate the attitude towards Mental Health was the **wellness_program**. It indicates whether the company offers a wellness program to the employees. This program should promote practices to enhance and treat mental health.
+
+The dataset was processed to understand the top 10 of states from the United States that have more positive answer from the workers about the existence of wellness programs in their companies.
+
+
 
